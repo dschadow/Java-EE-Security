@@ -18,7 +18,7 @@ public class FerrisWheelBean {
     private final Logger logger = LoggerFactory.getLogger(getClass());
 
     public List<FerrisWheel> getFerrisWheelsForUser(User user) {
-        Query query = em.createQuery("from FerrisWheel w where w.user=:user", FerrisWheel.class);
+        Query query = em.createQuery("from FerrisWheel w where w.user = :user", FerrisWheel.class);
         query.setParameter("user", user);
 
         return query.getResultList();
@@ -52,7 +52,8 @@ public class FerrisWheelBean {
     }
 
     public List<FerrisWheel> findFerrisWheels(Search search) {
-        Query query = em.createNativeQuery("select * from ferris_wheels where name = '" + search.getName() + "'", FerrisWheel.class);
+        Query query = em.createQuery("from FerrisWheel w where w.name = :search", FerrisWheel.class);
+        query.setParameter("search", search.getName());
         List resultList = query.getResultList();
 
         logger.info("Search returned {} results", resultList.size());

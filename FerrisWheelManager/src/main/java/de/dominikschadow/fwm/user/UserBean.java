@@ -45,7 +45,10 @@ public class UserBean {
     public User getUser(String username, String password) {
         String hash = hashPassword(password, username);
 
-        List<User> users = em.createQuery("from User u where u.username='" + username + "' and u.password='" + hash + "'", User.class).getResultList();
+        Query query = em.createQuery("from User u where u.username=:username and u.password=:hash", User.class);
+        query.setParameter("username", username);
+        query.setParameter("hash", hash);
+        List<User> users = query.getResultList();
 
         if (!users.isEmpty()) {
             return users.get(0);

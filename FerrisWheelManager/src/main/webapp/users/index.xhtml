@@ -34,7 +34,7 @@
         <h:column>
             <h:form id="advertiseForm">
                 <h:selectOneMenu id="advertiseDesc" value="#{advertiseController.ferrisWheelId}">
-                    <f:selectItems value="#{advertiseController.wheels}" var="fw"
+                    <f:selectItems value="#{advertiseController.wheels}" var="fw" itemLabelEscaped="true"
                                    itemLabel="#{fw.name}" itemValue="#{fw.id}"/>
                 </h:selectOneMenu>
                 <h:commandButton id="advertise" value="Advertise" action="#{advertiseController.advertise()}"/>

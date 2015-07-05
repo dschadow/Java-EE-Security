@@ -59,6 +59,11 @@
             <version>1.2.17</version>
             <scope>runtime</scope>
         </dependency>
+        <dependency>
+            <groupId>com.googlecode.owasp-java-html-sanitizer</groupId>
+            <artifactId>owasp-java-html-sanitizer</artifactId>
+            <version>r223</version>
+        </dependency>
     </dependencies>
 
     <build>
