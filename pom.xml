@@ -2,43 +2,21 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>javasecurity</artifactId>
-    <groupId>de.dominikschadow.javasecurity</groupId>
+    <artifactId>jeesecurity</artifactId>
+    <groupId>de.dominikschadow.jeesecurity</groupId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
-    <name>JavaSecurity</name>
-    <url>https://github.com/dschadow/JavaSecurity</url>
-    <description>This repository contains different security related Java projects.</description>
+    <name>FerrisWheelManager</name>
+    <url>https://github.com/dschadow/JEESecurity</url>
+    <description>This repository contains different security related Java Enterprise Edition (JEE) projects.</description>
 
     <organization>
         <name>Dominik Schadow</name>
         <url>http://www.dominikschadow.de</url>
     </organization>
 
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.2.5.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
-    </parent>
-
-    <issueManagement>
-        <system>GitHub</system>
-        <url>https://github.com/dschadow/JavaSecurity/issues</url>
-    </issueManagement>
-
-    <repositories>
-        <repository>
-            <id>gemfire-repository</id>
-            <name>Gemfire Repository</name>
-            <url>http://dist.gemstone.com/maven/release</url>
-        </repository>
-    </repositories>
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spring.version>4.1.7.RELEASE</spring.version>
-        <spring.security.version>4.0.1.RELEASE</spring.security.version>
         <slf4j.version>1.7.12</slf4j.version>
         <jsf.version>2.2.11</jsf.version>
         <owasp.encoder.version>1.2</owasp.encoder.version>
@@ -77,57 +55,14 @@
                 <version>${owasp.encoder.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.owasp.appsensor</groupId>
-                <artifactId>appsensor-core</artifactId>
-                <version>2.1.0</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-test</artifactId>
-                <version>${spring.version}</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-webmvc</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-jdbc</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.security</groupId>
-                <artifactId>spring-security-web</artifactId>
-                <version>${spring.security.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.security</groupId>
-                <artifactId>spring-security-config</artifactId>
-                <version>${spring.security.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.security</groupId>
-                <artifactId>spring-security-taglibs</artifactId>
-                <version>${spring.security.version}</version>
-                <scope>compile</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.jasypt</groupId>
-                <artifactId>jasypt-spring31</artifactId>
-                <version>1.9.2</version>
-                <scope>compile</scope>
+                <groupId>com.h2database</groupId>
+                <artifactId>h2</artifactId>
+                <version>1.4.187</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.shiro</groupId>
                 <artifactId>shiro-core</artifactId>
                 <version>1.2.3</version>
-            </dependency>
-            <dependency>
-                <groupId>com.h2database</groupId>
-                <artifactId>h2</artifactId>
-                <version>1.4.187</version>
             </dependency>
             <dependency>
                 <groupId>org.flywaydb</groupId>
@@ -156,21 +91,6 @@
                 <scope>runtime</scope>
             </dependency>
             <dependency>
-                <groupId>com.google.code.gson</groupId>
-                <artifactId>gson</artifactId>
-                <version>2.3.1</version>
-            </dependency>
-            <dependency>
-                <groupId>com.google.guava</groupId>
-                <artifactId>guava</artifactId>
-                <version>18.0</version>
-            </dependency>
-            <dependency>
-                <groupId>org.owasp.esapi</groupId>
-                <artifactId>esapi</artifactId>
-                <version>2.1.0</version>
-            </dependency>
-            <dependency>
                 <groupId>org.hibernate</groupId>
                 <artifactId>hibernate-core</artifactId>
                 <version>${hibernate.version}</version>
@@ -179,11 +99,6 @@
                 <groupId>org.hibernate</groupId>
                 <artifactId>hibernate-entitymanager</artifactId>
                 <version>${hibernate.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>commons-dbcp</groupId>
-                <artifactId>commons-dbcp</artifactId>
-                <version>1.4</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -201,16 +116,6 @@
                         <source>1.8</source>
                         <target>1.8</target>
                     </configuration>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.tomcat.maven</groupId>
-                    <artifactId>tomcat7-maven-plugin</artifactId>
-                    <version>2.2</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.eclipse.jetty</groupId>
-                    <artifactId>jetty-maven-plugin</artifactId>
-                    <version>9.3.0.v20150612</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -249,21 +154,6 @@
     </reporting>
 
     <modules>
-        <module>access-control-spring-security</module>
-        <module>crypto-hash</module>
-        <module>crypto-java</module>
-        <module>crypto-keyczar</module>
-        <module>crypto-shiro</module>
-        <module>crypto-spring</module>
-        <module>csrf</module>
-        <module>csrf-spring-security</module>
-        <module>direct-object-references</module>
-        <module>duke-encounters</module>
-        <module>intercept-me</module>
-        <module>security-header</module>
-        <module>session-handling</module>
-        <module>session-handling-spring-security</module>
-        <module>sql-injection</module>
-        <module>xss</module>
+        <module>FerrisWheelManager</module>
     </modules>
 </project>
