@@ -6,7 +6,7 @@
     <groupId>de.dominikschadow.jeesecurity</groupId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
-    <name>FerrisWheelManager</name>
+    <name>JEE Security</name>
     <url>https://github.com/dschadow/JEESecurity</url>
     <description>This repository contains different security related Java Enterprise Edition (JEE) projects.</description>
 
