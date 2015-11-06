@@ -32,7 +32,7 @@
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
-                <version>5.1.36</version>
+                <version>5.1.37</version>
             </dependency>
             <dependency>
                 <groupId>org.eclipse.persistence</groupId>
@@ -43,7 +43,7 @@
             <dependency>
                 <groupId>com.h2database</groupId>
                 <artifactId>h2</artifactId>
-                <version>1.4.187</version>
+                <version>1.4.190</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.shiro</groupId>
