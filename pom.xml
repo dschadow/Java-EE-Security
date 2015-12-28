@@ -21,6 +21,11 @@
         <flyway.version>3.2.1</flyway.version>
     </properties>
 
+    <issueManagement>
+        <system>GitHub</system>
+        <url>https://github.com/dschadow/JEESecurity/issues</url>
+    </issueManagement>
+
     <scm>
         <connection>scm:git:git@github.com:dschadow/JEESecurity.git</connection>
         <developerConnection>scm:git:git@github.com:dschadow/JEESecurity.git</developerConnection>
