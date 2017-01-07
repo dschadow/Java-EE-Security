@@ -12,3 +12,4 @@ This web application was tested with [Java Enterprise Edition 7](http://www.orac
 
 ##Meta
 [![Build Status](https://travis-ci.org/dschadow/Java-EE-Security.svg?branch=master)](https://travis-ci.org/dschadow/Java-EE-Security)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
