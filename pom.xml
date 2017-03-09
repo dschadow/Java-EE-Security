@@ -17,8 +17,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <slf4j.version>1.7.22</slf4j.version>
-        <flyway.version>4.0.3</flyway.version>
+        <slf4j.version>1.7.24</slf4j.version>
+        <flyway.version>4.1.2</flyway.version>
         <sonar.language>java</sonar.language>
     </properties>
 
@@ -135,7 +135,11 @@
             <plugin>
                 <groupId>org.owasp</groupId>
                 <artifactId>dependency-check-maven</artifactId>
-                <version>1.4.4.1</version>
+                <version>1.4.5</version>
+                <configuration>
+                    <skipProvidedScope>true</skipProvidedScope>
+                    <skipRuntimeScope>true</skipRuntimeScope>
+                </configuration>
                 <reportSets>
                     <reportSet>
                         <reports>
